@@ -14,4 +14,4 @@ It performs basic arithmetic operations such as addition, subtraction, multiplic
 - User-friendly interface with buttons for each digit and operation.
 
 ## Screenshots
-![Calculator Screenshot](file:///home/safu/Pictures/Screenshots/Screenshot%20from%202024-05-06%2023-49-17.png)
+![Calculator Screenshot](https://github.com/knowthyse1f/Calculator-Java-Project/assets/155375224/d87a74c9-ebb5-4066-a386-6f2cbebcde8a)
