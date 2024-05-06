@@ -12,3 +12,6 @@ It performs basic arithmetic operations such as addition, subtraction, multiplic
 - Delete (D) button to delete the last digit entered.
 - Input validation to prevent invalid inputs.
 - User-friendly interface with buttons for each digit and operation.
+
+## Screenshots
+![Calculator Screenshot](file:///home/safu/Pictures/Screenshots/Screenshot%20from%202024-05-06%2023-49-17.png)
