@@ -1,6 +1,6 @@
 # Java Swing Calculator
 
-This is a simple calculator application built using Java Swing for the GUI. <br>
+This is a simple calculator application built using Java Swing for the GUI.  
 It performs basic arithmetic operations such as addition, subtraction, multiplication, and division, as well as additional functions like square root, square, and inverse.
 
 ## Features
@@ -12,6 +12,10 @@ It performs basic arithmetic operations such as addition, subtraction, multiplic
 - Delete (D) button to delete the last digit entered.
 - Input validation to prevent invalid inputs.
 - User-friendly interface with buttons for each digit and operation.
+
+## Video Demo
+
+<iframe src="https://drive.google.com/file/d/1NFxG7uu0SjPzn09xg-PDAbGBSPJonPiR/preview" width="640" height="480"></iframe>
 
 ## Screenshots
 ![Calculator Screenshot](https://github.com/knowthyse1f/Calculator-Java-Project/assets/155375224/d87a74c9-ebb5-4066-a386-6f2cbebcde8a)
