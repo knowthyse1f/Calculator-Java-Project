@@ -1,9 +1,9 @@
 package Calculator;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 public class DesignCalculator extends CalculatorGUI implements ActionListener {
     private JLabel label = new JLabel();
@@ -218,6 +218,9 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
         } else if (source == clrButton) {
             label.setText("");
             textField.setText("");
+            result=0;
+            num1=0;
+            num2=0;
         } else if (source == delButton) {
             int l = textField.getText().length();
             if (l > 0) {
@@ -255,7 +258,51 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
             } else {
                 textField.setText(textField.getText() + ".");
             }
-        } else if (source == plusButton) {
+        } else if (source == plusButton ) {
+            if(minuscount>0 ||mulcount>0 ||divcount>0 ){
+             if(minuscount>0 ||mulcount>0 ||divcount>0 ){
+                pluscount=0;
+                minuscount=0;
+                mulcount=0;
+                divcount=0;
+                num2 = Double.parseDouble(textField.getText());
+                if (calculation == 1) {
+                    result = num1 + num2;
+                } else if (calculation == 2) {
+                    result = num1 - num2;
+                } else if (calculation == 3) {
+                    result = num1 * num2;
+                } else if (calculation == 4) {
+                    result = num1 / num2;
+                }
+    
+                if (Double.toString(result).endsWith(".0")) {
+                    textField.setText(Double.toString(result).replace(".0", ""));
+                } else {
+                    textField.setText(Double.toString(result));
+                }
+                label.setText("");
+    
+                num1 = result;
+            }
+           
+            pluscount++;
+            if (pluscount > 1) {
+                num2 = Double.parseDouble(textField.getText());
+                result = num1 + num2;
+                if (Double.toString(result).endsWith(".0")) {
+                    textField.setText(Double.toString(result).replace(".0", ""));
+                } else {
+                    textField.setText(Double.toString(result));
+                }
+                String str = textField.getText();
+                label.setText("");
+                num1 = result;
+                textField.setText("");
+                label.setText(str+ "+");
+            }
+            }
+           
             pluscount++;
             if (pluscount > 1) {
                 num2 = Double.parseDouble(textField.getText());
@@ -280,6 +327,34 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
             }
 
         } else if (source == minusButton) {
+
+             if(pluscount>0 ||mulcount>0 ||divcount>0 ){
+                pluscount=0;
+                minuscount=0;
+                mulcount=0;
+                divcount=0;
+                num2 = Double.parseDouble(textField.getText());
+                if (calculation == 1) {
+                    result = num1 + num2;
+                } else if (calculation == 2) {
+                    result = num1 - num2;
+                } else if (calculation == 3) {
+                    result = num1 * num2;
+                } else if (calculation == 4) {
+                    result = num1 / num2;
+                }
+    
+                if (Double.toString(result).endsWith(".0")) {
+                    textField.setText(Double.toString(result).replace(".0", ""));
+                } else {
+                    textField.setText(Double.toString(result));
+                }
+                label.setText("");
+    
+                num1 = result;
+            }
+           
+            
             minuscount++;
             if (minuscount > 1) {
                 num2 = Double.parseDouble(textField.getText());
@@ -303,6 +378,31 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
             label.setText(str + "-");
             }
         } else if (source == multiplyButton) {
+           if(pluscount>0 ||minuscount>0 ||divcount>0 ){
+                pluscount=0;
+                minuscount=0;
+                mulcount=0;
+                divcount=0;
+                num2 = Double.parseDouble(textField.getText());
+                if (calculation == 1) {
+                    result = num1 + num2;
+                } else if (calculation == 2) {
+                    result = num1 - num2;
+                } else if (calculation == 3) {
+                    result = num1 * num2;
+                } else if (calculation == 4) {
+                    result = num1 / num2;
+                }
+    
+                if (Double.toString(result).endsWith(".0")) {
+                    textField.setText(Double.toString(result).replace(".0", ""));
+                } else {
+                    textField.setText(Double.toString(result));
+                }
+                label.setText("");
+    
+                num1 = result;
+            }
             mulcount++;
             if (mulcount > 1) {
                 num2 = Double.parseDouble(textField.getText());
@@ -326,6 +426,31 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
             label.setText(str + "*");
             }
         } else if (source == divButton) {
+            if(pluscount>0 ||mulcount>0 ||minuscount>0 ){
+                pluscount=0;
+                minuscount=0;
+                mulcount=0;
+                divcount=0;
+                num2 = Double.parseDouble(textField.getText());
+                if (calculation == 1) {
+                    result = num1 + num2;
+                } else if (calculation == 2) {
+                    result = num1 - num2;
+                } else if (calculation == 3) {
+                    result = num1 * num2;
+                } else if (calculation == 4) {
+                    result = num1 / num2;
+                }
+    
+                if (Double.toString(result).endsWith(".0")) {
+                    textField.setText(Double.toString(result).replace(".0", ""));
+                } else {
+                    textField.setText(Double.toString(result));
+                }
+                label.setText("");
+    
+                num1 = result;
+            }
             divcount++;
             if (divcount > 1) {
                 num2 = Double.parseDouble(textField.getText());
@@ -371,6 +496,10 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
                 textField.setText(str);
             }
         } else if (source == equalButton) {
+            pluscount=0;
+            minuscount=0;
+            mulcount=0;
+            divcount=0;
             num2 = Double.parseDouble(textField.getText());
             if (calculation == 1) {
                 result = num1 + num2;
@@ -388,6 +517,7 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
                 textField.setText(Double.toString(result));
             }
             label.setText("");
+
             num1 = result;
 
         }
@@ -420,7 +550,7 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
         sqrButton.setEnabled(true);
         rootButton.setEnabled(true);
         pointButton.setEnabled(true);
-        pluscount = 0;
+        result=0;
     }
 
     public void disable() {
@@ -451,7 +581,7 @@ public class DesignCalculator extends CalculatorGUI implements ActionListener {
         sqrButton.setEnabled(false);
         rootButton.setEnabled(false);
         pointButton.setEnabled(false);
-        pluscount = 0;
+        result =0;
 
     }
 }
