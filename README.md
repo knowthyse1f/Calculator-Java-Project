@@ -15,7 +15,7 @@ It performs basic arithmetic operations such as addition, subtraction, multiplic
 
 ## Video Demo
 
-<iframe src="https://drive.google.com/file/d/1NFxG7uu0SjPzn09xg-PDAbGBSPJonPiR/preview" width="640" height="480"></iframe>
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://drive.google.com/file/d/1NFxG7uu0SjPzn09xg-PDAbGBSPJonPiR/view?usp=sharing)
 
 ## Screenshots
 ![Calculator Screenshot](https://github.com/knowthyse1f/Calculator-Java-Project/assets/155375224/d87a74c9-ebb5-4066-a386-6f2cbebcde8a)
